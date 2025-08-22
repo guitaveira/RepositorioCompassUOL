@@ -1,0 +1,690 @@
+{
+	"id": "3cf2b1dc-4cbb-4fb1-a9b8-3f983390de61",
+	"name": "ServeRest",
+	"timestamp": "2025-08-17T23:17:01.568Z",
+	"collection_id": "47430441-41bf7942-b5be-4d14-8c3e-c8736d023335",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 72,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2025-08-17T23:16:58.708Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "3ebcdeca-53c1-4b35-9766-25a2534e41ed",
+			"name": "Cadastrar usuário",
+			"url": "localhost:3000/usuarios",
+			"time": 5,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code é 201": true,
+				"Mensagem de sucesso": true,
+				"Id do usuário retornado": true,
+				"Resposta contém campos obrigatórios": true,
+				"Senha entre 5 e 10 caracteres": true,
+				"Não permitir gmail/hotmail": true
+			},
+			"testPassFailCounts": {
+				"Status code é 201": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Mensagem de sucesso": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Id do usuário retornado": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Resposta contém campos obrigatórios": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Senha entre 5 e 10 caracteres": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Não permitir gmail/hotmail": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				10,
+				5
+			],
+			"allTests": [
+				{
+					"Status code é 201": true,
+					"Mensagem de sucesso": true,
+					"Id do usuário retornado": true,
+					"Resposta contém campos obrigatórios": true,
+					"Senha entre 5 e 10 caracteres": true,
+					"Não permitir gmail/hotmail": true
+				},
+				{
+					"Status code é 201": true,
+					"Mensagem de sucesso": true,
+					"Id do usuário retornado": true,
+					"Resposta contém campos obrigatórios": true,
+					"Senha entre 5 e 10 caracteres": true,
+					"Não permitir gmail/hotmail": true
+				}
+			]
+		},
+		{
+			"id": "f8ee9086-6ff5-41c0-8563-2e9ab4d584da",
+			"name": "Listar usuários cadastrados",
+			"url": "localhost:3000/usuarios",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200 na busca do usuário": true
+			},
+			"testPassFailCounts": {
+				"Status code 200 na busca do usuário": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				5,
+				4
+			],
+			"allTests": [
+				{
+					"Status code 200 na busca do usuário": true
+				},
+				{
+					"Status code 200 na busca do usuário": true
+				}
+			]
+		},
+		{
+			"id": "7dd1c2af-cb6c-4aef-96cf-38aee6ec397f",
+			"name": "Editar usuário",
+			"url": "localhost:3000/usuarios/dUlfbyQc6Pe6HAeU",
+			"time": 7,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200 para dados alterados com sucesso": true,
+				"Formato de e-mail é válido": true,
+				"Não permitir gmail/hotmail": true,
+				"Senha entre 5 e 10 caracteres": true
+			},
+			"testPassFailCounts": {
+				"Status code 200 para dados alterados com sucesso": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Formato de e-mail é válido": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Não permitir gmail/hotmail": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Senha entre 5 e 10 caracteres": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				5,
+				7
+			],
+			"allTests": [
+				{
+					"Status code 200 para dados alterados com sucesso": true,
+					"Formato de e-mail é válido": true,
+					"Não permitir gmail/hotmail": true,
+					"Senha entre 5 e 10 caracteres": true
+				},
+				{
+					"Status code 200 para dados alterados com sucesso": true,
+					"Formato de e-mail é válido": true,
+					"Não permitir gmail/hotmail": true,
+					"Senha entre 5 e 10 caracteres": true
+				}
+			]
+		},
+		{
+			"id": "86b88cd7-a51e-4bd7-81c3-81f143b530cd",
+			"name": "Buscar usuário por ID",
+			"url": "localhost:3000/usuarios/dUlfbyQc6Pe6HAeU",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200 na busca do usuário": true,
+				"Usuário retornado contém os campos obrigatórios": true,
+				"Resposta em JSON": true
+			},
+			"testPassFailCounts": {
+				"Status code 200 na busca do usuário": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Usuário retornado contém os campos obrigatórios": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Resposta em JSON": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				4,
+				3
+			],
+			"allTests": [
+				{
+					"Status code 200 na busca do usuário": true,
+					"Usuário retornado contém os campos obrigatórios": true,
+					"Resposta em JSON": true
+				},
+				{
+					"Status code 200 na busca do usuário": true,
+					"Usuário retornado contém os campos obrigatórios": true,
+					"Resposta em JSON": true
+				}
+			]
+		},
+		{
+			"id": "2aba6137-a81c-4d42-a394-255613a4d025",
+			"name": "Realizar login",
+			"url": "localhost:3000/login",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200": true,
+				"Token retornado": true,
+				"Token deve expirar em 10 minutos": true
+			},
+			"testPassFailCounts": {
+				"Status code 200": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Token retornado": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Token deve expirar em 10 minutos": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				4,
+				4
+			],
+			"allTests": [
+				{
+					"Status code 200": true,
+					"Token retornado": true,
+					"Token deve expirar em 10 minutos": true
+				},
+				{
+					"Status code 200": true,
+					"Token retornado": true,
+					"Token deve expirar em 10 minutos": true
+				}
+			]
+		},
+		{
+			"id": "1661c768-b61f-4349-8f92-efc2477250ea",
+			"name": "Cadastrar produto",
+			"url": "localhost:3000/produtos",
+			"time": 5,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code 201": true,
+				"Mensagem de sucesso": true,
+				"Produto criado contém ID": true
+			},
+			"testPassFailCounts": {
+				"Status code 201": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Mensagem de sucesso": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Produto criado contém ID": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				6,
+				5
+			],
+			"allTests": [
+				{
+					"Status code 201": true,
+					"Mensagem de sucesso": true,
+					"Produto criado contém ID": true
+				},
+				{
+					"Status code 201": true,
+					"Mensagem de sucesso": true,
+					"Produto criado contém ID": true
+				}
+			]
+		},
+		{
+			"id": "1c82692b-61b6-404b-b1fb-45104f3886d0",
+			"name": "Listar produtos cadastrados",
+			"url": "localhost:3000/produtos",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200 lista de produtos": true,
+				"Produtos retornados em array": true,
+				"Produtos possuem campos esperados": true
+			},
+			"testPassFailCounts": {
+				"Status code 200 lista de produtos": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Produtos retornados em array": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Produtos possuem campos esperados": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				5,
+				4
+			],
+			"allTests": [
+				{
+					"Status code 200 lista de produtos": true,
+					"Produtos retornados em array": true,
+					"Produtos possuem campos esperados": true
+				},
+				{
+					"Status code 200 lista de produtos": true,
+					"Produtos retornados em array": true,
+					"Produtos possuem campos esperados": true
+				}
+			]
+		},
+		{
+			"id": "e6c14c49-bc82-47bd-928e-0ee8952ebec9",
+			"name": "Editar produto",
+			"url": "localhost:3000/produtos/0pHY07FnIpxQXTcI",
+			"time": 6,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200 para produto alterado ou cadastrado": true,
+				"Mensagem de sucesso na alteração": true
+			},
+			"testPassFailCounts": {
+				"Status code 200 para produto alterado ou cadastrado": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Mensagem de sucesso na alteração": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				7,
+				6
+			],
+			"allTests": [
+				{
+					"Status code 200 para produto alterado ou cadastrado": true,
+					"Mensagem de sucesso na alteração": true
+				},
+				{
+					"Status code 200 para produto alterado ou cadastrado": true,
+					"Mensagem de sucesso na alteração": true
+				}
+			]
+		},
+		{
+			"id": "8e42af0b-cabd-45eb-a229-45ddffe2b465",
+			"name": "Buscar produto por ID",
+			"url": "localhost:3000/produtos/0pHY07FnIpxQXTcI",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200 para busca com sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code 200 para busca com sucesso": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				5,
+				4
+			],
+			"allTests": [
+				{
+					"Status code 200 para busca com sucesso": true
+				},
+				{
+					"Status code 200 para busca com sucesso": true
+				}
+			]
+		},
+		{
+			"id": "556b7be8-d242-4adb-be2f-de7263b7b395",
+			"name": "Cadastrar carrinho",
+			"url": "localhost:3000/carrinhos",
+			"time": 8,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code é 201": true,
+				"Mensagem de sucesso": true,
+				"Id do usuário retornado": true
+			},
+			"testPassFailCounts": {
+				"Status code é 201": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Mensagem de sucesso": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Id do usuário retornado": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				9,
+				8
+			],
+			"allTests": [
+				{
+					"Status code é 201": true,
+					"Mensagem de sucesso": true,
+					"Id do usuário retornado": true
+				},
+				{
+					"Status code é 201": true,
+					"Mensagem de sucesso": true,
+					"Id do usuário retornado": true
+				}
+			]
+		},
+		{
+			"id": "d4e27e00-16e3-424b-acbf-1234ae78c88b",
+			"name": "Buscar carrinho por ID",
+			"url": "localhost:3000/carrinhos/J9HPrwmUmrWu5OCn",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200 para busca com sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code 200 para busca com sucesso": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				3,
+				4
+			],
+			"allTests": [
+				{
+					"Status code 200 para busca com sucesso": true
+				},
+				{
+					"Status code 200 para busca com sucesso": true
+				}
+			]
+		},
+		{
+			"id": "4ca53d24-65eb-4494-8a2f-c3853fdf3455",
+			"name": "Excluir carrinho e retornar produtos para estoque",
+			"url": "localhost:3000/carrinhos/cancelar-compra",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200 para exclusão realizada com sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code 200 para exclusão realizada com sucesso": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				7,
+				4
+			],
+			"allTests": [
+				{
+					"Status code 200 para exclusão realizada com sucesso": true
+				},
+				{
+					"Status code 200 para exclusão realizada com sucesso": true
+				}
+			]
+		},
+		{
+			"id": "466f87d6-7109-4cd1-aeaf-e40e46d99bc4",
+			"name": "Excluir produto",
+			"url": "localhost:3000/produtos/0pHY07FnIpxQXTcI",
+			"time": 4,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200 para exclusão com sucesso": true,
+				"Mensagem de sucesso": true
+			},
+			"testPassFailCounts": {
+				"Status code 200 para exclusão com sucesso": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Mensagem de sucesso": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				5,
+				4
+			],
+			"allTests": [
+				{
+					"Status code 200 para exclusão com sucesso": true,
+					"Mensagem de sucesso": true
+				},
+				{
+					"Status code 200 para exclusão com sucesso": true,
+					"Mensagem de sucesso": true
+				}
+			]
+		},
+		{
+			"id": "15574857-3fd3-494a-9186-a2df7745e3dd",
+			"name": "Listar carrinhos cadastrados",
+			"url": "localhost:3000/carrinhos",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				4,
+				3
+			],
+			"allTests": [
+				{},
+				{}
+			]
+		},
+		{
+			"id": "47f4725d-8266-4e7e-a949-6434906e717b",
+			"name": "Excluir usuário",
+			"url": "localhost:3000/usuarios/dUlfbyQc6Pe6HAeU",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code 200 na exclusão": true,
+				"Mensagem de sucesso na exclusão": true,
+				"Resposta em JSON": true
+			},
+			"testPassFailCounts": {
+				"Status code 200 na exclusão": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Mensagem de sucesso na exclusão": {
+					"pass": 2,
+					"fail": 0
+				},
+				"Resposta em JSON": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				5,
+				3
+			],
+			"allTests": [
+				{
+					"Status code 200 na exclusão": true,
+					"Mensagem de sucesso na exclusão": true,
+					"Resposta em JSON": true
+				},
+				{
+					"Status code 200 na exclusão": true,
+					"Mensagem de sucesso na exclusão": true,
+					"Resposta em JSON": true
+				}
+			]
+		}
+	],
+	"count": 2,
+	"totalTime": 152,
+	"collection": {
+		"requests": [
+			{
+				"id": "3ebcdeca-53c1-4b35-9766-25a2534e41ed",
+				"method": "POST"
+			},
+			{
+				"id": "f8ee9086-6ff5-41c0-8563-2e9ab4d584da",
+				"method": "GET"
+			},
+			{
+				"id": "7dd1c2af-cb6c-4aef-96cf-38aee6ec397f",
+				"method": "PUT"
+			},
+			{
+				"id": "86b88cd7-a51e-4bd7-81c3-81f143b530cd",
+				"method": "GET"
+			},
+			{
+				"id": "2aba6137-a81c-4d42-a394-255613a4d025",
+				"method": "POST"
+			},
+			{
+				"id": "1661c768-b61f-4349-8f92-efc2477250ea",
+				"method": "POST"
+			},
+			{
+				"id": "1c82692b-61b6-404b-b1fb-45104f3886d0",
+				"method": "GET"
+			},
+			{
+				"id": "e6c14c49-bc82-47bd-928e-0ee8952ebec9",
+				"method": "PUT"
+			},
+			{
+				"id": "8e42af0b-cabd-45eb-a229-45ddffe2b465",
+				"method": "GET"
+			},
+			{
+				"id": "556b7be8-d242-4adb-be2f-de7263b7b395",
+				"method": "POST"
+			},
+			{
+				"id": "d4e27e00-16e3-424b-acbf-1234ae78c88b",
+				"method": "GET"
+			},
+			{
+				"id": "4ca53d24-65eb-4494-8a2f-c3853fdf3455",
+				"method": "DELETE"
+			},
+			{
+				"id": "466f87d6-7109-4cd1-aeaf-e40e46d99bc4",
+				"method": "DELETE"
+			},
+			{
+				"id": "15574857-3fd3-494a-9186-a2df7745e3dd",
+				"method": "GET"
+			},
+			{
+				"id": "47f4725d-8266-4e7e-a949-6434906e717b",
+				"method": "DELETE"
+			}
+		]
+	}
+}
