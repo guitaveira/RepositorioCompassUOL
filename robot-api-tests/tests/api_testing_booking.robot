@@ -18,7 +18,7 @@ Cenario: GET - Verificar se Reserva foi Deletada
 
 # Testes POST  
 Cenario: POST - Criar Nova Reserva
-    ${booking_body}=    Create Dictionary    firstname=Maria    lastname=Silva    totalprice=200    depositpaid=${True}    additionalneeds=Dinner
+    ${booking_body}=    Create Dictionary    firstname=Mary    lastname=Silver    totalprice=200    depositpaid=${True}    additionalneeds=Dinner
     ${dates}=           Create Dictionary    checkin=2024-02-01    checkout=2024-02-05
     Set To Dictionary    ${booking_body}    bookingdates    ${dates}
     ${response}=    POST On Session    Restful-booker    /booking    json=${booking_body}
@@ -28,21 +28,21 @@ Cenario: POST - Criar Nova Reserva
 # Testes PUT
 Cenario: PUT - Atualizar Reserva com Sucesso
     ${dates}=    Create Dictionary    checkin=2025-01-01    checkout=2025-01-07
-    &{payload}=     Create Dictionary    firstname=James    lastname=Bond    totalprice=700    depositpaid=${False}    additionalneeds=Martini
+    &{payload}=     Create Dictionary    firstname=Thiago    lastname=Bond    totalprice=700    depositpaid=${False}    additionalneeds=Martini
     Set To Dictionary    ${payload}    bookingdates=${dates}
     ${response}=    PUT On Session    Restful-booker    /booking/${BOOKING_ID}    json=${payload}    headers=${AUTH_HEADERS}
     Status Should Be    200    ${response}
 
 Cenario: PUT - Tentar Atualizar Reserva Sem Autenticacao
     ${dates}=    Create Dictionary    checkin=2025-01-01    checkout=2025-01-07
-    &{payload}=     Create Dictionary    firstname=James    lastname=Bond    totalprice=700    depositpaid=${False}    additionalneeds=Martini
+    &{payload}=     Create Dictionary    firstname=Thiago    lastname=Bond    totalprice=700    depositpaid=${False}    additionalneeds=Martini
     Set To Dictionary    ${payload}    bookingdates=${dates}
     ${response}=    PUT On Session    Restful-booker    /booking/${BOOKING_ID}    json=${payload}    headers=${NO_AUTH_HEADERS}    expected_status=403
     Should Be Equal    ${response.status_code}    ${403}
 
 # Testes PATCH
 Cenario: PATCH - Atualizar Parcialmente Reserva com Sucesso
-    ${payload_parcial}=    Create Dictionary    firstname=John    lastname=Wick
+    ${payload_parcial}=    Create Dictionary    firstname=John   lastname=Kenner
     ${response}=    PATCH On Session    Restful-booker    /booking/${BOOKING_ID}    json=${payload_parcial}    headers=${AUTH_HEADERS}
     Status Should Be    200    ${response}
 
@@ -91,3 +91,4 @@ Cenario: Fluxo Completo - Criar, Consultar, Atualizar e Deletar
     ${response_delete}=    DELETE On Session    Restful-booker    /booking/${booking_id}    headers=${AUTH_HEADERS}    expected_status=201
 
     Should Be Equal    ${response_delete.status_code}    ${201}
+
