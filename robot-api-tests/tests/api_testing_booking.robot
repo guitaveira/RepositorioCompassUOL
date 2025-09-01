@@ -8,8 +8,8 @@ Test Setup        Criar Nova Reserva Para Teste
 Cenario: GET - Consultar Reserva Existente
     ${response}=    GET On Session    Restful-booker    /booking/${BOOKING_ID}
     Status Should Be    200    ${response}
-    Should Be Equal    ${response.json()}[firstname]    Jim
-    Should Be Equal    ${response.json()}[lastname]     Brown
+    Should Be Equal    ${response.json()}[firstname]    Gui
+    Should Be Equal    ${response.json()}[lastname]     Black
 
 Cenario: GET - Verificar se Reserva foi Deletada
     DELETE On Session    Restful-booker    /booking/${BOOKING_ID}    headers=${AUTH_HEADERS}
@@ -89,4 +89,5 @@ Cenario: Fluxo Completo - Criar, Consultar, Atualizar e Deletar
     
     # Deletar reserva
     ${response_delete}=    DELETE On Session    Restful-booker    /booking/${booking_id}    headers=${AUTH_HEADERS}    expected_status=201
+
     Should Be Equal    ${response_delete.status_code}    ${201}
