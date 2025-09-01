@@ -1,0 +1,68 @@
+# 🚀 Robot Framework - API Testing Project
+
+Este projeto realiza testes automatizados de API usando Robot Framework para a API Restful-Booker.
+
+## 📋 Sobre o Projeto
+
+Testes automatizados para a API Restful-Booker (https://restful-booker.herokuapp.com), cobrindo os principais verbos HTTP:
+- **GET** - Consultar reservas
+- **POST** - Criar novas reservas  
+- **PUT** - Atualizar reservas completas
+- **PATCH** - Atualizar reservas parcialmente
+- **DELETE** - Deletar reservas
+
+## 🏗️ Estrutura do Projeto
+
+```
+RepositorioCompassUOL/
+├── tests/
+│   └── api_testing_booking.robot          # Arquivo principal com os casos de teste
+├── resources/
+│   └── api_testing_booking_resources.robot # Keywords e configurações
+├── results/                               # Pasta para relatórios (gerada automaticamente)
+└── README.md                              # Este arquivo
+```
+
+## ⚙️ Pré-requisitos
+
+- Python 3.7+
+- Robot Framework
+- Biblioteca RequestsLibrary
+
+## 🔧 Instalação
+
+1. **Instale o Python** (se não tiver):
+   https://www.python.org/downloads/
+
+2. **Instale o Robot Framework**:
+   ```bash
+   pip install robotframework
+   ```
+
+3. **Instale a RequestsLibrary**:
+   ```bash
+   pip install robotframework-requests
+   ```
+
+
+
+## 🚀 Como Executar
+
+**Na pasta raiz do projeto**:
+```bash
+robot tests/api_testing_booking.robot
+```
+
+**Com relatórios detalhados**:
+```bash
+robot --outputdir results --log log.html --report report.html tests/api_testing_booking.robot
+```
+
+**Executar testes específicos**:
+```bash
+# Apenas testes GET
+robot --test "GET*" tests/api_testing_booking.robot
+
+# Apenas testes DELETE  
+robot --test "DELETE*" tests/api_testing_booking.robot
+```
