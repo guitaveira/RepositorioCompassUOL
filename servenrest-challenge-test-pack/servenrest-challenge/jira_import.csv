@@ -1,0 +1,11 @@
+Issue Type,Summary,Description,Labels
+Test,API - Login retorna token Bearer,"Objective: Validar retorno 'Bearer'
+Preconditions: admin válido
+Steps:
+1) POST /login com credenciais válidas
+Expected: 200 + Authorization iniciando por 'Bearer'",api,smoke
+Test,API - Produto (403 sem admin),"Objective: Negativo sem permissão
+Preconditions: sem header de auth
+Steps:
+1) POST /produtos sem Authorization
+Expected: 403",api,negative
